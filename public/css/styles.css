@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+header {
+    background-color: #000000;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-size: 20px;
+}
+.logo {
+    flex: 1;
+}
+.logo img{
+    width: 65px;
+    margin-left: 10px;
+}
+nav {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+nav li {
+    margin-right: 20px;
+    position: relative;
+}
+nav a {
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+}
+nav a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1px; /* Grosor de la línea */
+    background-color: #fff;
+    bottom: -2px;
+    left: 0;
+    transition: width 0.3s ease-in-out;
+}
+nav a:hover::before {
+    width: 100%; /* Anima la línea para que cubra todo el ancho del enlace en el evento hover */
+}
+.menu-icon {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+#menu-button {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.welcome {
+    background: url('/assets/img/fondo.jpg') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /* Inicialmente, el sector de bienvenida estará oculto */
+    transform: translateY(20px); /* También lo desplazamos hacia abajo */
+    transition: opacity 0.9s, transform 0.59s;
+}
+
+.logotipo img {
+    max-width: 200px;
+}
+
+.content h1 {
+    font-size: 36px;
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+}
+.content p{
+    font-size: 25px;
+    color: #fff;
+    text-align: center;
+    margin-top: px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    nav {
+        display: none;
+        flex-direction: column;
+        background-color: #000000;
+        position: absolute;
+        top: 88px;
+        right: 0;
+        width: 100%;
+        z-index: 1;
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column; /* Muestra los elementos uno debajo del otro */
+        text-align: right; /* Centra los elementos en el menú desplegable */
+        margin-right: 20px;
+    }
+
+    nav li {
+        margin: 8px 0; /* Espaciado entre elementos en el menú desplegable */
+    }
+
+    #menu-button {
+        display: block;
+    }
+}
+@media (min-width: 768px) {
+    .welcome {
+        background-attachment: fixed;
+    }
+
+    .logotipo img {
+        max-width: 300px;
+    }
+
+    .content h1 {
+        font-size: 3rem;
+    }
+}
