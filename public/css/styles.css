@@ -179,7 +179,7 @@ nav a:hover::before {
     text-decoration: none;
     color: #ffffff;
     border: 2px solid #ffffff;
-    border-radius: 15px;
+    border-radius: 10px;
     margin: 0 5px;
     transition: 0.9s;
 }
@@ -188,7 +188,30 @@ nav a:hover::before {
     color: #000000;
     transition: 0.9s;
 }
+.podcast-sector {
+    display: flex;
+    width: 100%;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+}
 
+.podcast-sector .podcast-thumbnail {
+    width: 40%;
+    padding-right: 10px;
+}
+
+.podcast-sector .podcast-details {
+    width: 60%;
+}
+
+.podcast-sector .podcast-details h2 {
+    margin: 0;
+}
+
+.podcast-sector .podcast-details p {
+    margin: 0;
+}
 
 
 
